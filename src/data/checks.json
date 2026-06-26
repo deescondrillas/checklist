@@ -1,0 +1,461 @@
+{
+  "_metadata": "v1.0.3 | 2026-06-25 | Franco De Escondrillas",
+  "checks": {
+    "1001": {
+      "nombre": "Llenar cartas porte", 
+      "descripcion": "Un mes antes y fuera de oficina, la persona responsable realiza el llenado de cartas porte",
+      "sub_checks": []
+    },
+    "1002": {
+      "nombre": "Revisar cajas cafés",
+      "descripcion": "15 días antes, se revisan las cajas café faltantes de preparar", 
+      "sub_checks": []
+    },
+    "1003": {
+      "nombre": "Preparar caja de papelería",
+      "descripcion": "15 días antes, cada área prepara la caja de papelería, checando que su respectivo checklist se encuentre correcto y pegándolo a la caja",
+      "sub_checks": []
+    },
+    "1004": {
+      "nombre": "Limpiar mercancía",
+      "descripcion": "Dos semanas antes, se limpia la mercancía",
+      "sub_checks": []
+    },
+    "1005": {
+      "nombre": "Realizar pre-expo",
+      "descripcion": "Una semana antes, se realiza la pre-expo en oficina",
+      "sub_checks": []
+    },
+    "1006": {
+      "nombre": "Revisar condición de candados",
+      "descripcion": "15 días antes, responsable de candados verifica que estos se encuentren en buenas condiciones",
+      "sub_checks": []
+    },
+    "1007": {
+      "nombre": "Rotular cinchos y etiquetas",
+      "descripcion": "15 días antes, responsable de almacén rotula cinchos y etiquetas de cajas y baúles",
+      "sub_checks": []
+    },
+    "1008": {
+      "nombre": "Trasladar material a oficina",
+      "descripcion": "Se guardan tuppers para atención de clientes y se mueven cajas, charolas y baúles de almacén a oficina",
+      "sub_checks": []
+    },
+    "1009": {
+      "nombre": "Revisar cajas de utilería",
+      "descripcion": "15 días antes, se revisan las cajas grises que hagan falta preparar",
+      "sub_checks": []
+    },
+    "1010": {
+      "nombre": "Ir por cajas a bóveda",
+      "descripcion": "3 días antes, un colaborador seleccionado acude por las cajas a bóveda",
+      "sub_checks": []
+    },
+    "1011": {
+      "nombre": "Preparar mercancía para expo",
+      "descripcion": "Se separa mercancía que se llevará a expo, según especifique dirección",
+      "sub_checks": [
+        {
+          "descripcion": "En el caso de oro, también se separa la mercancía que no se lleva"
+        }
+      ]
+    },
+    "1012": {
+      "nombre": "Empacar utilería",
+      "descripcion": "En cajas grises se empaca equipo de cafetería, papelería, productos de limpieza y artículos adicionales",
+      "sub_checks": []
+    },
+    "1013": {
+      "nombre": "Entregar cajas a utilería",
+      "descripcion": "Se entregan cajas a responsable de utilería para su posterior cierre y colocación de cinchos y carta porte",
+      "sub_checks": []
+    },
+    "1014": {
+      "nombre": "Realizar inventario de mercancía",
+      "descripcion": "Se revisa que la mercancía que se lleva a expo sea correcta y se acomoda en baúles, registrando acomodo, contenido y peso de cada uno",
+      "sub_checks": []
+    },
+    "1015": {
+      "nombre": "Revisar y cerrar cajas y baúles",
+      "descripcion": "Se cierran baúles y cajas con su candado, cinchos y carta porte correspondiente, proporcionado por el área de utilería",
+      "sub_checks": []
+    },
+    "1016": {
+      "nombre": "Revisar equipo de videovigilancia",
+      "descripcion": "Se revisa que el equipo de videovigilancia esté en condiciones de operación",
+      "sub_checks": []
+    },
+    "1017": {
+      "nombre": "Preparar viáticos",
+      "descripcion": "1 a 3 días antes, se preparan los sobres de viáticos y se entregan a cada colaborador que viajará",
+      "sub_checks": []
+    },
+    "1018": {
+      "nombre": "Empacar equipos sensibles",
+      "descripcion": "Celulares y tokens se empaquetan en una caja rígida para su protección durante el traslado",
+      "sub_checks": []
+    },
+    "1019": {
+      "nombre": "Empacar equipo operativo",
+      "descripcion": "En un baúl, se emplayan y almacenan cargadores, computadoras, impresoras, dispositivos NFC, rollos de tiquetera, tiqueteras, mouse y teclados",
+      "sub_checks": []
+    },
+    "1020": {
+      "nombre": "Custodiar equipo sensible",
+      "descripcion": "Dirección custodia el equipo sensible",
+      "sub_checks": []
+    },
+    "1021": {
+      "nombre": "Preparar documentos para ventas",
+      "descripcion": "Se imprimen formatos en papel para el registro de la operación de ventas",
+      "sub_checks": []
+    },
+    "1022": {
+      "nombre": "Preparar efectivo",
+      "descripcion": "El cambio de caja se resguarda en el baúl",
+      "sub_checks": []
+    },
+    "1023": {
+      "nombre": "Reunirse con líder de área",
+      "descripcion": "Cada equipo de ventas realiza una reunión, para repasar líneas de producto, precios vigentes, condiciones de pago y política comercial de la empresa",
+      "sub_checks": []
+    },
+    "1024": {
+      "nombre": "Identificar zonas, charolas y roles",
+      "descripcion": "Se asignan zonas, charolas y roles a cada vendedor",
+      "sub_checks": []
+    },
+    "1025": {
+      "nombre": "Preparar material de apoyo para ventas",
+      "descripcion": "Preparar catálogos, tarjetas de presentación, formatos de alta de cliente nuevo, formatos de levantamiento de pedido y formatos PLD",
+      "sub_checks": []
+    },
+    "1026": {
+      "nombre": "Confirmar posesión de gafete",
+      "descripcion": "Se confirma que cada vendedor cuente con su gafete para ingreso a la expo",
+      "sub_checks": []
+    },
+    "1027": {
+      "nombre": "Proporcionar baúles que están bajo resguardo",
+      "descripcion": "Proporcionar los baúles que se tengan bajo resguardo en esta área",
+      "sub_checks": []
+    },
+    "1028": {
+      "nombre": "Trasladar equipo de videovigilancia",
+      "descripcion": "El equipo de videovigilancia es trasladado por el personal de TI, fuera del embarque",
+      "sub_checks": []
+    },
+    "2001": {
+      "nombre": "Recibir baúles y cajas",
+      "descripcion": "Se recibe la mercancía y se revisa el número de serie de cinchos y cartas porte, para verificar que todo esté correcto",
+      "sub_checks": []
+    },
+    "2002": {
+      "nombre": "Trasladar y vigilar apertura de baúles y cajas",
+      "descripcion": "Apoyar transportando baúles y cajas al área general y supervisar desde la apertura hasta el vaciado de los mismos",
+      "sub_checks": []
+    },
+    "2003": {
+      "nombre": "Realizar pruebas de visión de cámaras",
+      "descripcion": "Se realizan pruebas de visión de cámaras previo a su colocación",
+      "sub_checks": []
+    },
+    "2004": {
+      "nombre": "Colocar cámaras y hacer pruebas de seguridad",
+      "descripcion": "Se colocan las cámaras y se realizan pruebas de seguridad, validando que todos los dispositivos estén en correcto funcionamiento",
+      "sub_checks": []
+    },
+    "2005": {
+      "nombre": "Preparar gafetes del personal",
+      "descripcion": "Se asegura que todos los gafetes estén listos para el ingreso a la expo",
+      "sub_checks": []
+    },
+    "2006": {
+      "nombre": "Limpiar stand",
+      "descripcion": "Se llega a limpiar el stand",
+      "sub_checks": []
+    },
+    "2007": {
+      "nombre": "Etiquetar stands o mercancía",
+      "descripcion": "Se solicitan etiquetas a administración para etiquetar los stands o mercancía durante el primer día",
+      "sub_checks": []
+    },
+    "2008": {
+      "nombre": "Montar mercancía",
+      "descripcion": "Se monta mercancía, se cuelgan cadenas y se acomoda todo lo electrónico en stands; los baúles vacíos se cierran y llevan al lugar asignado",
+      "sub_checks": []
+    },
+    "2009": {
+      "nombre": "Acomodar papelería",
+      "descripcion": "Acomodar tuppers de atención y repartir tanas, plumas, plumones, lastras y calculadoras entre colaboradores",
+      "sub_checks": []
+    },
+    "2010": {
+      "nombre": "Acomodar área de empaquetado y pagos",
+      "descripcion": "Se acomodan bolsas, bimbos, engrapadora, diurex, báscula, impresora, computadora, calculadora y hojas de impresora",
+      "sub_checks": []
+    },
+    "2011": {
+      "nombre": "Acomodar área de cafetería",
+      "descripcion": "Se trasladan los elementos de cafetería al área designada y se acomodan",
+      "sub_checks": []
+    },
+    "2012": {
+      "nombre": "Recibir lista de precios vigentes",
+      "descripcion": "Dirección administrativa confirma y entrega las listas de precios vigentes y autorizadas para la expo",
+      "sub_checks": []
+    },
+    "2101": {
+      "nombre": "Recibir y calificar al cliente",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se identifica si es mayorista registrado, cliente nuevo o menudo" },
+        { "descripcion": "Para cliente nuevo, se llena formato de alta y se aplica procedimiento PLD" }, 
+        { "descripcion": "Para cliente existente, antes de ofrecer crédito y precios al vendedor se valida con dirección"}
+      ]
+    },
+    "2102": {
+      "nombre": "Asesorar y exhibición segura",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se detectan necesidades del cliente y asesora según líneas disponibles" },
+        { "descripcion": "La mercancía se exhibe una pieza o charola a la vez; conteo visual de piezas" },
+        { "descripcion": "No se deja mercancía desatendida en mostrador" },
+        { "descripcion": "Los colaboradores se asisten entre ellos para mantener atención y vigilancia" }
+      ]
+    },
+    "2103": {
+      "nombre": "Cotizar y dar condiciones comerciales",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "El precio se determina por peso o pieza, según lista de precios" },
+        { "descripcion": "No se ofrecen descuentos; cualquier condición especial debe ser autorizada por Dirección General" }
+      ]
+    },
+    "2104": {
+      "nombre": "Levantar pedido",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se confirma con cliente productos, cantidades, pesos, precios y condiciones de pago" },
+        { "descripcion": "En ventas a crédito, se valida primero con dirección" },
+        { "descripcion": "Se canaliza al cliente a administración para elaboración de nota y cobro" },
+        { "descripcion": "En apartados, la mercancía se coloca en tupper etiquetado con peso, nombre del cliente y si se ha pagado" }
+      ]
+    },
+    "2105": {
+      "nombre": "Captura de prospectos",
+      "descripcion": "Se registran en el formato aquellos clientes que no cerraron compra",
+      "sub_checks": []
+    },
+    "2106": {
+      "nombre": "Brindar servicio al cliente",
+      "descripcion": "Se brinda servicio de alimentos y bebidas a clientes",
+      "sub_checks": []
+    },
+    "2107": {
+      "nombre": "Realizar notas",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se verifican nombre del cliente, contacto, productos, cantidades, precios y condiciones de pago" },
+        { "descripcion": "Se elabora la nota de manera clara y sin errores" },
+        { "descripcion": "Se confirma con el cliente el total de la compra" },
+        { "descripcion": "Se entrega copia al cliente y se resguarda la copia interna para control administrativo" }
+      ]
+    },
+    "2108": {
+      "nombre": "Recibir pagos y abonos",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se solicita número de nota o referencia de compra" },
+        { "descripcion": "Se verifica el saldo pendiente" },
+        { "descripcion": "Se confirma el método de pago" },
+        { "descripcion": "En caso de efectivo, contar frente al cliente" },
+        { "descripcion": "En caso de depósito o transferencia, verificar comprobante" },
+        { "descripcion": "Se registra pago o abono inmediatamente en sistema" },
+        { "descripcion": "Se actualiza el saldo pendiente del cliente" },
+        { "descripcion": "Se entrega comprobante o confirmación de pago" }
+      ]
+    },
+    "2109": {
+      "nombre": "Cobrar notas",
+      "descripcion": "Durante la expo:",
+      "sub_checks": [
+        { "descripcion": "Se revisan notas pendientes" },
+        { "descripcion": "Se identifican clientes con saldo vencido o próximo a vencer" },
+        { "descripcion": "Se realiza seguimiento cordial y profesional" },
+        { "descripcion": "Se confirma monto pendiente, fecha y método de pago" },
+        { "descripcion": "Se registra cualquier compromiso de pago en sistema" },
+        { "descripcion": "Se da seguimiento hasta liquidación total" }
+      ]
+    },
+    "2110": {
+      "nombre": "Captar clientes y vigilar áreas",
+      "descripcion": "Se realizan escaneos a colaboradores cuando salgan del stand y se apoya a vendedores con sus clientes",
+      "sub_checks": []
+    },
+    "2111": {
+      "nombre": "Apoyar en 14K",
+      "descripcion": "Se apoya a compañeros de 14K, principalmente en la revisión con Garrett en entradas y salidas",
+      "sub_checks": []
+    },
+    "2112": {
+      "nombre": "Cerrar pedidos pendientes y apartados",
+      "descripcion": "Se da prioridad al cierre de pedidos pendientes y apartados antes de iniciar el resguardo de mercancía",
+      "sub_checks": []
+    },
+    "2113": {
+      "nombre": "Documentar apartados",
+      "descripcion": "Se confirma con los clientes con apartado o crédito la forma de surtido y envío de su mercancía",
+      "sub_checks": []
+    },
+    "2201": {
+      "nombre": "Reportar ventas",
+      "descripcion": "Al cierre del día, se entrega el reporte de ventas a líder de área",
+      "sub_checks": []
+    },
+    "2202": {
+      "nombre": "Reportar prospectos",
+      "descripcion": "Al cierre del evento, cada líder de área entrega la relación de prospectos captados para su seguimiento en oficina",
+      "sub_checks": []
+    },
+    "2203": {
+      "nombre": "Hacer corte al final del día",
+      "descripcion": "Se reúnen todas las notas, ventas, pagos, abonos, efectivo y transferencias del día",
+      "sub_checks": [
+        { "descripcion": "Se verifica que los ingresos coincidan con los registros" },
+        { "descripcion": "Se identifican y reportan diferencias" },
+        { "descripcion": "Se elabora el reporte diario de cierre" },
+        { "descripcion": "Se entrega corte y efectivo al responsable" },
+        { "descripcion": "Se resguardan notas, comprobantes y reportes" },
+        { "descripcion": "Se etiquetan con peso, nombre y estado del pago los tuppers con mercancía apartada" }
+      ]
+    },
+    "2204": {
+      "nombre": "Hacer control de mercancía y cierre operativo",
+      "descripcion": "Al terminar la expo:",
+      "sub_checks": [
+        { "descripcion": "Totalizar tuppers con mercancía que regresarán a oficina" },
+        { "descripcion": "Verificar que la mercancía coincida con los registros de venta" },
+        { "descripcion": "Entregar efectivo y oro fino a responsable, registrando la entrega" },
+        { "descripcion": "Identificar diferencias, faltantes e incidencias en caja de fin de expo" },
+        { "descripcion": "Comenzar la carga de información relacionada con ventas, pagos, abonos y saldos pendientes" },
+        { "descripcion": "Apoyar en la preparación de mercancía para inventario y traslado" }
+      ]
+    },
+    "2205": {
+      "nombre": "Hacer conteo de mercancía y taras",
+      "descripcion": "Se realiza el conteo de mercancía que viene en cartones y de tara conforme a las torres que se acomodan en baúles",
+      "sub_checks": []
+    },
+    "2206": {
+      "nombre": "Resguardar mercancía",
+      "descripcion": "Se emplaya la mercancía que lo requiera, se apunta y se resguarda en baúles y cajas",
+      "sub_checks": []
+    },
+    "2207": {
+      "nombre": "Resguardar utilería",
+      "descripcion": "Se guarda la utilería: charolas de exhibición, charolas de cadena, tuppers, esponjas de anillo y papelería sobrante",
+      "sub_checks": []
+    },
+    "2208": {
+      "nombre": "Vigilar durante llenado y cierre de baúles",
+      "descripcion": "Se apoya en la vigilancia del llenado de baúles y puesta de candados, cinchos y cartas porte",
+      "sub_checks": []
+    },
+    "2209": {
+      "nombre": "Verificar stand vacío y baúles cerrados",
+      "descripcion": "Se verifica que el stand quede vacío y limpio, además de que baúles cuenten con candados, cinchos y cartas porte",
+      "sub_checks": []
+    },
+    "2210": {
+      "nombre": "Desmontar y guardar equipo",
+      "descripcion": "Se desmonta y guarda en espacio asignado; en caso de ser necesario, se realizan paneos de videos cuando existe una situación",
+      "sub_checks": []
+    },
+    "2211": {
+      "nombre": "Resguardar equipo en stand y limpiar área",
+      "descripcion": "Al final del día, se realiza limpieza del equipo y se resguarda, junto con los alimentos y bebidas",
+      "sub_checks": []
+    },
+    "2212": {
+      "nombre": "Limpiar y empacar equipo",
+      "descripcion": "Al final del día, se realiza limpieza del equipo y se guarda en cajas grises para última revisión previo al cerrado de cajas",
+      "sub_checks": []
+    },
+    "2300": {
+      "nombre": "Entregar a Panamericana",
+      "descripcion": "Se verifica que los baúles estén debidamente cerrados y documentados para hacer entrega a Panamericana",
+      "sub_checks": []
+    },
+    "3001": {
+      "nombre": "Recibir baúles y cajas",
+      "descripcion": "Se recibe la mercancía y se revisa el número de serie de cinchos y cartas porte, para verificar que todo esté correcto",
+      "sub_checks": []
+    },
+    "3002": {
+      "nombre": "Extraer mercancía",
+      "descripcion": "Se realiza la extracción de mercancía y se quita el playo",
+      "sub_checks": []
+    },
+    "3003": {
+      "nombre": "Hacer inventario pos-expo",
+      "descripcion": "Se pesa y cuenta lo que regresa para hacer inventario de lo que se llevó, regresó y vendió", 
+      "sub_checks": []
+    },
+    "3004": {
+      "nombre": "Acomodar mercancía",
+      "descripcion": "Se acomoda la mercancía que no se compró o apartó en su lugar para iniciar ventas", 
+      "sub_checks": []
+    },
+    "3005": {
+      "nombre": "Resguardar baúles",
+      "descripcion": "Una vez vacíos, se guardan los baúles en su lugar", 
+      "sub_checks": []
+    },
+    "3006": {
+      "nombre": "Revisar videos de seguridad si es necesario",
+      "descripcion": "En caso de ser necesario, se revisan los videos de seguridad del evento", 
+      "sub_checks": []
+    },
+    "3007": {
+      "nombre": "Dar seguimiento a prospectos y cotizaciones abiertas",
+      "descripcion": "Vendedores y líderes de área dan seguimiento a prospectos y cotizaciones que quedaron abiertas", 
+      "sub_checks": []
+    },
+    "3008": {
+      "nombre": "Confirmar surtidos y enviar apartados",
+      "descripcion": "Se confirma el surtido y datos del cliente y se hace envío de tuppers pendientes o se habla al cliente para que acuda por su mercancía", 
+      "sub_checks": []
+    },
+    "3009": {
+      "nombre": "Limpiar equipo a profundidad",
+      "descripcion": "Se extrae equipo de cafetería, se limpia a profundidad y se acomoda para su uso diario", 
+      "sub_checks": []
+    },
+    "3010": {
+      "nombre": "Organizar cajas para siguiente expo",
+      "descripcion": "Se organizan todas aquellas cajas que se puedan dejar listas para la siguiente expo", 
+      "sub_checks": []
+    },
+    "3011": {
+      "nombre": "Dar seguimiento a cobranza",
+      "descripcion": "Se da seguimiento a la cobranza de los pedidos a crédito", 
+      "sub_checks": []
+    },
+    "3012": {
+      "nombre": "Generar reportes de ventas",
+      "descripcion": "Se elabora el reporte de resultados por vendedor y por línea de producto", 
+      "sub_checks": []
+    },
+    "3013": {
+      "nombre": "Cargar datos administrativos",
+      "descripcion": "Cargar los datos administrativos, validar que sean correctos y archivar documentación y comprobantes", 
+      "sub_checks": []
+    },
+    "3014": {
+      "nombre": "Resguardar equipo en oficina",
+      "descripcion": "Los equipos de TI se almacenan en oficina hasta siguiente expo", 
+      "sub_checks": []
+    }
+  }
+}
