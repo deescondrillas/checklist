@@ -1,7 +1,7 @@
 // v1.0.1 | 2026-06-25 | Franco De Escondrillas
 
 // Taylor's approximation for collision probability p ≈ 1 - e^(-n² ÷ 2³¹)
-// For the 80 checks of v1.0.3, p ≈ 0.0003%
+// For the 80 checks of ../data/checks.json v1.0.3, p ≈ 0.0003%
 
 class Node {
   constructor(key) {
