@@ -1,18 +1,16 @@
-// v1.0.1 | 2026-06-25 | Franco De Escondrillas
+// v1.0.2 | 2026-06-26 | Franco De Escondrillas
 
 // Taylor's approximation for collision probability p ≈ 1 - e^(-n² ÷ 2³¹)
-// For the 80 checks of ../data/checks.json v1.0.3, p ≈ 0.0003%
+// For the 80 different checks of ../data/checks.json v1.0.3, p ≈ 0.0003%
 
 class Node {
   constructor(key) {
-    this.priority = crypto.getRandomValues(new Uint8Array(1))[0] >>> 2;
+    this.priority = crypto.getRandomValues(new Uint32Array(1))[0] >>> 2;
+    this.completed = false;
     this.right = null;
     this.left = null;
-    this.size = 1;
-    
     this.key = key;
-    this.min = key;
-    this.max = key;
+    this.size = 1;
   }
 }
 
@@ -22,10 +20,7 @@ class Treap {
   }
 
   #update(node) {
-    if (!node) return;
-    node.size = 1 + (node.left?.size ?? 0) + (node.right?.size ?? 0);
-    node.max = node.right ? node.right.max : node.key;
-    node.min = node.left ? node.left.min : node.key;
+    if (node) node.size = 1 + (node.left?.size ?? 0) + (node.right?.size ?? 0);
   }
   
   #split(rootT, key) {
@@ -62,21 +57,20 @@ class Treap {
     }
   }
 
-  find(key) {
-    let current = this.root;
-    while (current) {
-      if (current.key === key) return current;
-      current = key < current.key ? current.left : current.right;
-    }
-    return null;
+  find(key, rootT = this.root) {
+    if (!rootT) return null;
+    if (key === rootT.key) return rootT;
+    return key < rootT.key ? this.find(key, rootT.left) : this.find(key, rootT.right);
   }
   
   insert(key) {
+    if (this.find(key)) return;
     const [leftT, rightT] = this.#split(this.root, key);
     this.root = this.#meld(this.#meld(leftT, new Node(key)), rightT);
   }
 
   delete(key) {
+    if (!this.find(key)) return;
     const [leftT, rightT] = this.#split(this.root, key);
     this.root = this.#meld(leftT, rightT);
   }
@@ -105,3 +99,5 @@ class Treap {
     otherTreap.root = null;
   }
 }
+
+export default Treap;

@@ -1,0 +1,89 @@
+/* v1.0.2 | 2026-06-27 | Franco De Escondrillas */
+
+.checklist-view {
+  scrollbar-color: var(--border) transparent;
+  flex-direction: column;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  min-height: 0;
+  flex: 1;
+}
+
+.checklist-view::-webkit-scrollbar {
+  width: 3px;
+}
+
+.checklist-view::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.checklist-view::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.sticky-top {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: var(--surface);
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+
+.task-header {
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.task-header-row {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  display: flex;
+}
+
+.progress-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 13px;
+  margin: 0;
+}
+
+.warning-banner {
+  border-bottom: 1px solid #B69121;
+  border-top: 1px solid #B69121;
+  background: var(--surface);
+  color: #B69121;
+  
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 16px;
+  font-weight: 600;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .warning-banner {
+    border-bottom-color: #FFE169;
+    border-top-color: #FFE169;
+    background: var(--surface);
+    color: #FFE169;
+  }
+}
+
+.change-roles-btn {
+  background-color: var(--accent);
+  transition: color 0.15s, background-color 0.15s;
+  color: var(--bg);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.change-roles-btn:hover {
+  background-color: var(--success);
+}

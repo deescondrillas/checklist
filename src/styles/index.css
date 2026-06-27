@@ -1,0 +1,123 @@
+/* v1.0.3 | 2026-06-26 | Franco De Escondrillas */
+
+:root {
+  --accent-border: rgba(00, 55, 128, 0.5);
+  --accent-bg: rgba(00, 55, 128, 0.1);
+  --accent: rgb(00, 55, 128);
+  --success: #006EFF;
+  
+  --shadow: rgba(0, 0, 0, 0.08) 0 2px 8px;
+  --surface: #F7F5ED;
+  --border: #E8E0C9;
+  --bg: #FCFBF8;
+
+  --text-muted: #7A7380;
+  --text-h: #08060D;
+  --text: #3D3540;
+  
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font: 16px/150% var(--sans);
+  letter-spacing: 0.16px;
+  font-synthesis: none;
+
+  color-scheme: light dark;
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-border: rgba(0, 110, 255, 0.4);
+    --accent-bg: rgba(0, 110, 255, 0.12);
+    --accent: rgb(0, 110, 255);
+    --success: #003780;
+    
+    --shadow: rgba(0, 0, 0, 0.3) 0 2px 8px;
+    --surface: #1A1B22;
+    --border: #2E303A;
+    --bg: #0F0F13;
+    
+    --text-muted: #8B8590;
+    --text-h: #F3F4F6;
+    --text: #C4BFCA;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100svh;
+  display: flex;
+}
+
+h1 {
+  letter-spacing: -0.5px;
+  color: var(--text-h);
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: none;
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 0;
+}
+
+.fab {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  height: 56px;
+  bottom: 28px;
+  z-index: 100;
+  right: 24px;
+  width: 56px;
+}
+
+
+.fab:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fab--reset {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+.fab--complete {
+  background: var(--success);
+  color: #FFFFFF;
+}

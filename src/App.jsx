@@ -1,122 +1,87 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// v1.0.2 | 2026-06-26 | Franco De Escondrillas
 
-function App() {
-  const [count, setCount] = useState(0)
+import { MdOutlineToggleOff, MdToggleOn } from 'react-icons/md';
+import { useState, useRef } from 'react';
+
+import { useChecklist } from './hooks/useChecklist.js';
+import { clearProgress } from './storage/cookies.js';
+import { useRoles } from './hooks/useRoles.js';
+import { PHASES } from './utils/phases.js';
+
+import RoleSelector from './components/RoleSelector/RoleSelector.jsx';
+import PhaseNav from './components/PhaseNav/PhaseNav.jsx';
+import TaskList from './components/TaskList/TaskList.jsx';
+
+function ChecklistView({ selectedRoles, onChangeRoles }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { tasks, toggleTask, resetAll, completeAll, completedCount, totalCount, currentIndex, hasOutOfOrder } =
+    useChecklist(selectedRoles, PHASES[activeIndex].key, activeIndex);
+  const containerRef = useRef(null);
+  const stickyRef = useRef(null);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="checklist-view" ref={containerRef}>
+      <div className="sticky-top" ref={stickyRef}>
+        <PhaseNav activeIndex={activeIndex} onChange={setActiveIndex} />
+        <div className="task-header">
+          <div className="task-header-row">
+            <p className="progress-label">{completedCount} / {totalCount} tareas completadas</p>
+            <button className="change-roles-btn" onClick={onChangeRoles}>Cambiar área</button>
+          </div>
+          {hasOutOfOrder && (
+            <div className="warning-banner" role="alert">
+              <strong>Tarea anterior pendiente</strong>
+            </div>
+          )}
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      </div>
+      <TaskList
+        tasks={tasks}
+        onToggle={toggleTask}
+        currentIndex={currentIndex}
+        stickyRef={stickyRef}
+        containerRef={containerRef}
+        phaseIndex={activeIndex}
+      />
+      <button
+        className={`fab ${completedCount === 0 ? 'fab--reset' : 'fab--complete'}`}
+        onClick={completedCount > 0 ? resetAll : completeAll}
+        aria-label={completedCount > 0 ? 'Desmarcar todo' : 'Marcar todo como completado'}
+      >
+        {completedCount === 0 ? <MdOutlineToggleOff size={28} /> : <MdToggleOn size={28} />}
+      </button>
+    </div>
+  );
 }
 
-export default App
+export default function App() {
+  const { selectedRoles, toggleRole, clearRoles } = useRoles();
+  const [view, setView] = useState(() => selectedRoles.size > 0 ? 'checklist' : 'select');
+
+  function handleConfirm() {
+    setView('checklist');
+  }
+
+  function handleChangeRoles() {
+    clearRoles();
+    clearProgress();
+    setView('select');
+  }
+
+  if (view === 'checklist') {
+    return (
+      <ChecklistView
+        selectedRoles={selectedRoles}
+        onChangeRoles={handleChangeRoles}
+      />
+    );
+  }
+
+  return (
+    <RoleSelector
+      selectedRoles={selectedRoles}
+      onToggle={toggleRole}
+      onConfirm={handleConfirm}
+    />
+  );
+}

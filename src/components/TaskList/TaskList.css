@@ -1,0 +1,22 @@
+/* v1.0.1 | 2026-06-26 | Franco De Escondrillas */
+
+.no-tasks {
+  color: var(--text-muted);
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.task-list-wrapper {
+  flex-direction: column;
+  padding-bottom: 100svh;
+  display: flex;
+  flex: 1;
+}
+
+.task-list {
+  flex-direction: column;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}

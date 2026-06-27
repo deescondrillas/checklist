@@ -1,0 +1,80 @@
+/* v1.0.3 | 2026-06-27 | Franco De Escondrillas */
+
+.task-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.task-item.completed {
+  opacity: 0.4;
+}
+
+.task-row {
+  align-items: center;
+  padding: 14px 16px;
+  text-align: left;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.task-check-indicator {
+  transition: color 0.15s;
+  flex: 0 0 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.task-item:not(.completed) .task-check-indicator {
+  color: var(--accent);
+}
+
+.task-item.completed .task-check-indicator {
+  color: var(--success);
+}
+
+.task-name {
+  color: var(--text-h);
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.task-item.completed .task-name {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-details {
+  padding: 0 16px 16px 48px;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.task-desc {
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.sub-checks {
+  flex-direction: column;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 6px;
+}
+
+.sub-checks li {
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 12px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.sub-checks li::before {
+  position: absolute;
+  content: '·';
+  left: 0;
+}
