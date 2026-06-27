@@ -9,7 +9,7 @@ function parseAll() {
 }
 
 function saveAll(map) {
-  document.cookie = `${KEY}=${encodeURIComponent(JSON.stringify(map))}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Strict`;
+  document.cookie = `${KEY}=${encodeURIComponent(JSON.stringify(map))}; path=/; max-age=${7 * 24 * 60 * 60}; Secure; SameSite=Strict`;
 }
 
 export function getProgress(phaseIndex) {
