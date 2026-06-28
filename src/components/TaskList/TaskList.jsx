@@ -1,4 +1,4 @@
-// v1.0.2 | 2026-06-26 | Franco De Escondrillas
+// v1.0.3 | 2026-06-28 | Franco De Escondrillas
 
 import TaskItem from '../TaskItem/TaskItem.jsx';
 import { useEffect, useRef } from 'react';
@@ -31,6 +31,7 @@ export default function TaskList({ tasks, onToggle, currentIndex, stickyRef, con
           <TaskItem
             key={task.id}
             task={task}
+            index={i}
             onToggle={onToggle}
             isCurrent={i === currentIndex}
             isSkipped={!task.completed && i < lastCompletedIdx}
