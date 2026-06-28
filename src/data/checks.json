@@ -1,5 +1,5 @@
 {
-  "_metadata": "v1.0.3 | 2026-06-25 | Franco De Escondrillas",
+  "_metadata": "v1.0.4 | 2026-06-28 | Franco De Escondrillas",
   "checks": {
     "1001": {
       "nombre": "Llenar cartas porte", 
@@ -53,7 +53,7 @@
     },
     "1011": {
       "nombre": "Preparar mercancía para expo",
-      "descripcion": "Se separa mercancía que se llevará a expo, según especifique dirección",
+      "descripcion": "Se separa mercancía que se llevará a expo, según especifique Dirección",
       "sub_checks": [
         {
           "descripcion": "En el caso de oro, también se separa la mercancía que no se lleva"
@@ -177,7 +177,7 @@
     },
     "2007": {
       "nombre": "Etiquetar stands o mercancía",
-      "descripcion": "Se solicitan etiquetas a administración para etiquetar los stands o mercancía durante el primer día",
+      "descripcion": "Se solicitan etiquetas a Administración para etiquetar los stands o mercancía durante el primer día",
       "sub_checks": []
     },
     "2008": {
@@ -202,16 +202,16 @@
     },
     "2012": {
       "nombre": "Recibir lista de precios vigentes",
-      "descripcion": "Dirección administrativa confirma y entrega las listas de precios vigentes y autorizadas para la expo",
+      "descripcion": "Dirección Administrativa confirma y entrega las listas de precios vigentes y autorizadas para la expo",
       "sub_checks": []
     },
     "2101": {
       "nombre": "Recibir y calificar al cliente",
       "descripcion": "Durante la expo:",
       "sub_checks": [
-        { "descripcion": "Se identifica si es mayorista registrado, cliente nuevo o menudo" },
+        { "descripcion": "Se identifica si es mayorista registrado, cliente nuevo o menudeo" },
         { "descripcion": "Para cliente nuevo, se llena formato de alta y se aplica procedimiento PLD" }, 
-        { "descripcion": "Para cliente existente, antes de ofrecer crédito y precios al vendedor se valida con dirección"}
+        { "descripcion": "Para cliente existente, antes de ofrecer crédito y precios al vendedor se valida con Dirección"}
       ]
     },
     "2102": {
@@ -237,8 +237,8 @@
       "descripcion": "Durante la expo:",
       "sub_checks": [
         { "descripcion": "Se confirma con cliente productos, cantidades, pesos, precios y condiciones de pago" },
-        { "descripcion": "En ventas a crédito, se valida primero con dirección" },
-        { "descripcion": "Se canaliza al cliente a administración para elaboración de nota y cobro" },
+        { "descripcion": "En ventas a crédito, se valida primero con Dirección" },
+        { "descripcion": "Se canaliza al cliente a Administración para elaboración de nota y cobro" },
         { "descripcion": "En apartados, la mercancía se coloca en tupper etiquetado con peso, nombre del cliente y si se ha pagado" }
       ]
     },
