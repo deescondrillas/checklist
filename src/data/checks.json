@@ -398,7 +398,7 @@
       "sub_checks": []
     },
     "3003": {
-      "nombre": "Hacer inventario pos-expo",
+      "nombre": "Hacer inventario post-expo",
       "descripcion": "Se pesa y cuenta lo que regresa para hacer inventario de lo que se llevó, regresó y vendió", 
       "sub_checks": []
     },
