@@ -1,4 +1,4 @@
-/* v1.0.2 | 2026-06-27 | Franco De Escondrillas */
+/* v1.0.3 | 2026-07-01 | Franco De Escondrillas */
 
 .checklist-view {
   scrollbar-color: var(--border) transparent;
@@ -86,4 +86,28 @@
 
 .change-roles-btn:hover {
   background-color: var(--success);
+}
+
+/* 430px — large phones */
+@media (min-width: 430px) {
+  .warning-banner { font-size: 14px; padding: 10px 20px; }
+  .task-header-row { padding: 10px 20px; }
+  .change-roles-btn { font-size: 14px; }
+  .progress-label { font-size: 14px; }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  .change-roles-btn { font-size: 15px; padding: 6px 12px; }
+  .warning-banner { font-size: 15px; padding: 12px 24px; }
+  .task-header-row { padding: 12px 24px; }
+  .progress-label { font-size: 15px; }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  .change-roles-btn { font-size: 16px; padding: 6px 14px; }
+  .warning-banner { font-size: 16px; padding: 14px 32px; }
+  .task-header-row { padding: 14px 32px; }
+  .progress-label { font-size: 16px; }
 }

@@ -1,4 +1,4 @@
-/* v1.0.3 | 2026-06-27 | Franco De Escondrillas */
+/* v1.0.4 | 2026-07-01 | Franco De Escondrillas */
 
 .task-item {
   border-bottom: 1px solid var(--border);
@@ -77,4 +77,33 @@
   position: absolute;
   content: '·';
   left: 0;
+}
+
+/* 430px — large phones */
+@media (min-width: 430px) {
+  .task-details { padding: 0 18px 16px 50px; }
+  .sub-checks li { font-size: 14px; }
+  .task-row { padding: 14px 18px; }
+  .task-name { font-size: 16px; }
+  .task-desc { font-size: 15px; }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  .task-check-indicator { flex: 0 0 24px; height: 24px; width: 24px; }
+  .task-details { padding: 0 24px 20px 64px; }
+  .task-row { padding: 18px 24px; gap: 16px; }
+  .sub-checks li { font-size: 15px; }
+  .task-name { font-size: 17px; }
+  .task-desc { font-size: 16px; }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  .task-check-indicator { flex: 0 0 26px; height: 26px; width: 26px; }
+  .task-details { padding: 0 32px 24px 78px; }
+  .task-row { padding: 20px 32px; gap: 20px; }
+  .sub-checks li { font-size: 16px; }
+  .task-name { font-size: 18px; }
+  .task-desc { font-size: 17px; }
 }

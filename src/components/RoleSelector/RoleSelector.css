@@ -1,4 +1,4 @@
-/* v1.0.2 | 2026-06-26 | Franco De Escondrillas */
+/* v1.0.3 | 2026-07-01 | Franco De Escondrillas */
 
 .role-selector {
   flex-direction: column;
@@ -11,6 +11,10 @@
   min-height: 0;
   gap: 16px;
   flex: 1;
+}
+
+.role-selector h1 svg {
+  vertical-align: middle;
 }
 
 .role-hint {
@@ -76,4 +80,28 @@
 
 .confirm-btn:disabled {
   opacity: 0.35;
+}
+
+/* 430px — large phones */
+@media (min-width: 430px) {
+  .role-selector { padding: 36px 24px; }
+  .role-hint { font-size: 15px; }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  .role-card { font-size: 18px; padding: 18px 16px; }
+  .role-selector { padding: 48px 40px; gap: 24px; }
+  .confirm-btn { font-size: 18px; padding: 18px; }
+  .role-hint { font-size: 16px; }
+  .role-grid { gap: 14px; }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  .role-card { font-size: 20px; padding: 22px 20px; }
+  .confirm-btn { font-size: 20px; padding: 20px; }
+  .role-selector { padding: 64px 80px; }
+  .role-hint { font-size: 17px; }
+  .role-grid { gap: 16px; }
 }

@@ -1,4 +1,4 @@
-/* v1.0.3 | 2026-06-26 | Franco De Escondrillas */
+/* v1.0.4 | 2026-07-01 | Franco De Escondrillas */
 
 :root {
   --accent-border: rgba(00, 55, 128, 0.5);
@@ -15,7 +15,7 @@
   --text-h: #08060D;
   --text: #3D3540;
   
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: 'Geist', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font: 16px/150% var(--sans);
@@ -57,6 +57,7 @@ body {
 
 #root {
   flex-direction: column;
+  position: relative;
   overflow: hidden;
   max-width: 480px;
   margin: 0 auto;
@@ -70,6 +71,14 @@ h1 {
   font-weight: 600;
   font-size: 28px;
   margin: 0 0 4px;
+}
+
+h2 {
+  letter-spacing: -0.5px;
+  color: var(--text-h);
+  font-weight: 600;
+  margin: 0 0 4px;
+  padding: 10px;
 }
 
 p {
@@ -97,7 +106,7 @@ button {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   display: flex;
   height: 56px;
   bottom: 28px;
@@ -120,4 +129,26 @@ button {
 .fab--complete {
   background: var(--success);
   color: #FFFFFF;
+}
+
+/* 430px — large phones */
+@media (min-width: 430px) {
+  h1 { font-size: 30px; }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  #root { max-width: 640px; }
+  
+  .fab { height: 64px; width: 64px; }
+  h2 { padding: 14px 16px; }
+  h1 { font-size: 38px; }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  #root { max-width: 760px; }
+  
+  .fab { height: 68px; width: 68px; }
+  h1 { font-size: 44px; }
 }

@@ -1,4 +1,4 @@
-// v1.0.2 | 2026-06-26 | Franco De Escondrillas
+// v1.0.3 | 2026-07-01 | Franco De Escondrillas
 
 import { MdOutlineToggleOff, MdToggleOn } from 'react-icons/md';
 import { useState, useRef } from 'react';
@@ -20,29 +20,32 @@ function ChecklistView({ selectedRoles, onChangeRoles }) {
   const stickyRef = useRef(null);
 
   return (
-    <div className="checklist-view" ref={containerRef}>
-      <div className="sticky-top" ref={stickyRef}>
-        <PhaseNav activeIndex={activeIndex} onChange={setActiveIndex} />
-        <div className="task-header">
-          <div className="task-header-row">
-            <p className="progress-label">{completedCount} / {totalCount} tareas completadas</p>
-            <button className="change-roles-btn" onClick={onChangeRoles}>Cambiar área</button>
-          </div>
-          {hasOutOfOrder && (
-            <div className="warning-banner" role="alert">
-              <strong>Tarea anterior pendiente</strong>
+    <>
+      <div className="checklist-view" ref={containerRef}>
+        <div className="sticky-top" ref={stickyRef}>
+          <PhaseNav activeIndex={activeIndex} onChange={setActiveIndex} />
+          <div className="task-header">
+            <div className="task-header-row">
+              <p className="progress-label">{completedCount} / {totalCount} tareas completadas</p>
+              <button className="change-roles-btn" onClick={onChangeRoles}>Cambiar área</button>
             </div>
-          )}
+            <h2 class="title">Actividades pendientes</h2>
+            {hasOutOfOrder && (
+              <div className="warning-banner" role="alert">
+                <strong>Tarea anterior pendiente</strong>
+              </div>
+            )}
+          </div>
         </div>
+        <TaskList
+          tasks={tasks}
+          onToggle={toggleTask}
+          currentIndex={currentIndex}
+          stickyRef={stickyRef}
+          containerRef={containerRef}
+          phaseIndex={activeIndex}
+        />
       </div>
-      <TaskList
-        tasks={tasks}
-        onToggle={toggleTask}
-        currentIndex={currentIndex}
-        stickyRef={stickyRef}
-        containerRef={containerRef}
-        phaseIndex={activeIndex}
-      />
       <button
         className={`fab ${completedCount === 0 ? 'fab--reset' : 'fab--complete'}`}
         onClick={completedCount > 0 ? resetAll : completeAll}
@@ -50,7 +53,7 @@ function ChecklistView({ selectedRoles, onChangeRoles }) {
       >
         {completedCount === 0 ? <MdOutlineToggleOff size={28} /> : <MdToggleOn size={28} />}
       </button>
-    </div>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
-// v1.0.4 | 2026-06-27 | Franco De Escondrillas
+// v1.0.5 | 2026-07-01 | Franco De Escondrillas
 
+import { IoMdCheckboxOutline } from 'react-icons/io';
 import './RoleSelector.css';
 
 const ROLES = [
@@ -17,8 +18,8 @@ const ROLES = [
 export default function RoleSelector({ selectedRoles, onToggle, onConfirm }) {
   return (
     <div className="role-selector">
-      <h1>¿Cuál es tu área?</h1>
-      <p className="role-hint">Puedes seleccionar varias</p>
+      <h1><IoMdCheckboxOutline /> Expo Joya</h1>
+      <p className="role-hint">Selecciona tu(s) área(s)</p>
       <div className="role-grid">
         {ROLES.map(({ key, label, shortLabel }) => (
           <button

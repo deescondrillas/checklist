@@ -1,4 +1,4 @@
-/* v1.0.1 | 2026-06-26 | Franco De Escondrillas */
+/* v1.0.2 | 2026-07-01 | Franco De Escondrillas */
 
 .phase-nav {
   border-bottom: 1px solid var(--border);
@@ -30,4 +30,20 @@
 
 .phase-btn:hover:not(.active) {
   color: var(--text-h);
+}
+
+/* 430px — large phones */
+@media (min-width: 430px) {
+  .phase-btn { font-size: 14px; padding: 12px 18px; }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  .phase-nav { justify-content: center; }
+  .phase-btn { font-size: 15px; padding: 14px 22px; }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  .phase-btn { font-size: 16px; padding: 16px 26px; }
 }
